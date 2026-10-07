@@ -13,13 +13,28 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - run: node --test test/*.test.cjs
+      - run: node scripts/improve.cjs
+      - run: node --test test/*.test.cjs
       - run: node --check site/app.js
+      - name: Record validated quality improvements
+        run: |
+          if ! git diff --quiet -- site/experience.json; then
+            git config user.name 'storescan-quality-bot'
+            git config user.email 'storescan-quality-bot@users.noreply.github.com'
+            git add site/experience.json
+            git commit -m 'Improve demo from observed catalog quality'
+            git push origin HEAD:main
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

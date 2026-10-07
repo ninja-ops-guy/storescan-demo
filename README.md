@@ -23,3 +23,13 @@ Run `node --test test/*.test.cjs` to validate the catalog.
 Disable **StoreScan demo catalog publisher** in StarNet ROUTINES to pause updates. Disable the Pages workflow to pause deployments. To roll back, revert the relevant commit on GitHub and pause the publisher until the source issue is resolved.
 
 Only `site/` is deployed. The workflow uses the standard GitHub Pages build artifact and deployment actions: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+
+## Bounded improvement loop
+
+On each catalog update and daily scheduled build, `scripts/improve.cjs` evaluates catalog quality,
+produces `site/experience.json`, runs tests and records changes before deployment. It proposes a
+curated view with stale/duplicate/unsafe candidates withheld and unsupported title claims removed.
+The raw catalog remains unchanged. The future frontend can consume the curated view; current
+frontend work is deferred. History is bounded to 30 changes and unchanged evidence produces no
+new quality commit. The backlog distinguishes missing demand evidence from missing real outcomes.
+This is catalog-quality adaptation, not measured conversion optimization or autonomous code rewriting.

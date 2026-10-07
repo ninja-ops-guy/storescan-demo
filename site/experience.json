@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "source_hash": "ce6e0fae6cd75fb6eda47b11c26422e5c633cc2734e82f63379459fb33e2e9bd",
+  "source_scan": "scan_f89ed774-bf8f-49ab-92a3-a451af2025c2",
+  "items": [
+    {
+      "id": "prod_bf595bc5-a761-4b36-8bfd-2bef329ac59e",
+      "title": "1000 Piece Moon Puzzle",
+      "category": "Play & leisure",
+      "category_basis": "TITLE_INFERENCE"
+    },
+    {
+      "id": "prod_c4f1d221-dfea-4d1c-9f1e-04ca3fcc8899",
+      "title": "0.5mm Fineliner 3pc Set",
+      "category": "Desk & studio",
+      "category_basis": "TITLE_INFERENCE"
+    },
+    {
+      "id": "prod_5884f757-fd50-4c73-9a72-0263fa297843",
+      "title": "100 Emoji Gold Necklace",
+      "category": "Accessories",
+      "category_basis": "TITLE_INFERENCE"
+    },
+    {
+      "id": "prod_02244f48-83c7-4eb5-8104-d001fab50dae",
+      "title": "0.5L Corded Waterbottle",
+      "category": "Everyday carry",
+      "category_basis": "TITLE_INFERENCE"
+    }
+  ],
+  "categories": [
+    "Accessories",
+    "Desk & studio",
+    "Everyday carry",
+    "Play & leisure"
+  ],
+  "changes": [
+    {
+      "id": "prod_02244f48-83c7-4eb5-8104-d001fab50dae",
+      "action": "SANITIZE_TITLE",
+      "reason": "unsupported_safety_claim"
+    },
+    {
+      "id": "prod_06619928-4ff9-4537-858d-0f6e53d5895b",
+      "action": "HIDE",
+      "reason": "specialist_review_required"
+    }
+  ],
+  "metrics": {
+    "input_count": 5,
+    "visible_count": 4,
+    "suppressed_count": 1,
+    "title_claims_removed": 1
+  },
+  "backlog": [
+    {
+      "code": "LOW_ELIGIBLE_COVERAGE",
+      "priority": 2,
+      "task": "Find additional eligible candidates; never fill gaps with invented products."
+    },
+    {
+      "code": "DEMAND_EVIDENCE_MISSING",
+      "priority": 1,
+      "task": "Connect Kalodata and Google Trends observations before selecting real product tests."
+    },
+    {
+      "code": "OUTCOME_MEASUREMENT_MISSING",
+      "priority": 2,
+      "task": "Connect aggregate visitor and commercial outcomes before optimizing for conversion."
+    }
+  ],
+  "learning_basis": "CATALOG_QUALITY_ONLY",
+  "conversion_lift": null,
+  "signature": "7123bfeb11338436de70076fa395101b17f63b7d2bebbf41587caaa2a286ae61",
+  "history": [
+    {
+      "at": "2026-10-07T02:04:37.591Z",
+      "signature": "7123bfeb11338436de70076fa395101b17f63b7d2bebbf41587caaa2a286ae61",
+      "source_scan": "scan_f89ed774-bf8f-49ab-92a3-a451af2025c2",
+      "changes": [
+        {
+          "id": "prod_02244f48-83c7-4eb5-8104-d001fab50dae",
+          "action": "SANITIZE_TITLE",
+          "reason": "unsupported_safety_claim"
+        },
+        {
+          "id": "prod_06619928-4ff9-4537-858d-0f6e53d5895b",
+          "action": "HIDE",
+          "reason": "specialist_review_required"
+        }
+      ],
+      "metrics": {
+        "input_count": 5,
+        "visible_count": 4,
+        "suppressed_count": 1,
+        "title_claims_removed": 1
+      },
+      "reason": "Measured catalog quality checks; no sales or conversion inference."
+    }
+  ]
+}
