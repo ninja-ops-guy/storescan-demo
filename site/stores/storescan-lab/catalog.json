@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "store": {
+    "slug": "storescan-lab",
+    "brand": "StoreScan Desk Lab",
+    "niche": "Desk organization and workday comfort",
+    "audience": "Home-office workers",
+    "positioning": "A calmer, more practical workspace",
+    "color": "#325c45",
+    "categories": [
+      "desk"
+    ],
+    "currency": "USD",
+    "mode": "DEMO",
+    "domains": [],
+    "return_policy": "Demonstration only. No orders accepted."
+  },
+  "items": [
+    {
+      "id": "prod_b750c27e-3f24-4ff4-8e5f-e91eeca7ff02",
+      "title": "Demo Desk Organizer",
+      "description": "Synthetic workflow demonstration for StoreScan Desk Lab. Not a real offer.",
+      "category": "desk",
+      "seo_title": "Demo Desk Organizer",
+      "specifications": {
+        "type": "fixture"
+      },
+      "variants": [
+        {
+          "sku": "DEMO-storescan-lab",
+          "label": "DEMO-storescan-lab",
+          "price_cents": 5000
+        }
+      ],
+      "currency": "USD",
+      "shipping_disclosure": "No orders; delivery figures are fixtures.",
+      "media": [
+        {
+          "url": null,
+          "rights": "GENERATED_PLACEHOLDER",
+          "provenance": "Original demo placeholder"
+        }
+      ],
+      "demo": true,
+      "fixture": true,
+      "commercial_eligibility": "NOT_ACCEPTING_ORDERS",
+      "source_urls": []
+    }
+  ],
+  "release_hash": "1d1440a4b81e4bc9b1febff07dcc4e2ddfde4d778faf3251dae4e8eb12886472"
+}
