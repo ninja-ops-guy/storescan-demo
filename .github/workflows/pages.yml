@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@v6
         with:
@@ -35,16 +35,6 @@ jobs:
         with:
           name: storefront-preview
           path: site
-      - name: Record validated quality improvements
-        if: github.event_name != 'pull_request'
-        run: |
-          if ! git diff --quiet -- site/experience.json; then
-            git config user.name 'storescan-quality-bot'
-            git config user.email 'storescan-quality-bot@users.noreply.github.com'
-            git add site/experience.json
-            git commit -m 'Improve demo from observed catalog quality'
-            git push origin HEAD:main
-          fi
       - uses: actions/configure-pages@v5
         if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v4
