@@ -4,7 +4,7 @@ A static, automated research storefront. **No checkout, payments, orders or veri
 
 ## Automation
 
-1. StarNet scans Thieve daily at 09:00 America/New_York on the owner's Windows computer.
+1. StarNet scans Thieve daily at 09:00 America/New_York 
 2. Analyst, risk reviewer and operator run at 09:10 / 09:20 / 09:30.
 3. A fixed-target data publisher syncs eligible discovery candidates to `site/catalog.json` hourly at minute 45. It also catches up after missed runs while StarNet is active.
 4. A commit triggers GitHub Actions validation and Pages deployment. A daily cloud rebuild checks the saved catalog even when the local computer is offline; it cannot run the local crawler.
