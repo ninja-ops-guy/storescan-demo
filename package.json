@@ -1,0 +1,10 @@
+{
+  "name": "starnet-bootstrap-storefront",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test test/catalog.test.cjs test/checkout.test.cjs test/improve.test.cjs test/previews.test.cjs test/stores.test.cjs",
+    "validate": "node scripts/validate-stores.cjs"
+  },
+  "engines": { "node": ">=22" }
+}
