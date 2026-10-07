@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "mode": "DEMO_ONLY",
+  "market": "US",
+  "scan_id": "scan_f89ed774-bf8f-49ab-92a3-a451af2025c2",
+  "updated_at": "2026-10-07T00:36:32.700Z",
+  "items": [
+    {
+      "id": "prod_bf595bc5-a761-4b36-8bfd-2bef329ac59e",
+      "title": "1000 Piece Moon Puzzle",
+      "description": "A product discovery candidate in our automated storefront experiment. Supplier, delivery and demand checks are pending.",
+      "source_url": "https://thieve.co/products/1000-piece-moon-puzzle/vpUg9XNQjWsIhzc0j9ny",
+      "observed_at": "2026-10-07T00:36:32.699Z",
+      "price": null,
+      "currency": "USD",
+      "status": "RESEARCH_REQUIRED",
+      "demo": true
+    },
+    {
+      "id": "prod_c4f1d221-dfea-4d1c-9f1e-04ca3fcc8899",
+      "title": "0.5mm Fineliner 3pc Set",
+      "description": "A product discovery candidate in our automated storefront experiment. Supplier, delivery and demand checks are pending.",
+      "source_url": "https://thieve.co/products/05mm-fineliner-3pc-set/EvTxeoOv4SCc0OdvOKrM",
+      "observed_at": "2026-10-07T00:36:32.698Z",
+      "price": null,
+      "currency": "USD",
+      "status": "RESEARCH_REQUIRED",
+      "demo": true
+    },
+    {
+      "id": "prod_5884f757-fd50-4c73-9a72-0263fa297843",
+      "title": "100 Emoji Gold Necklace",
+      "description": "A product discovery candidate in our automated storefront experiment. Supplier, delivery and demand checks are pending.",
+      "source_url": "https://thieve.co/products/100-emoji-gold-necklace/CJ9R52Duz9TnXmnphzPs",
+      "observed_at": "2026-10-07T00:36:32.699Z",
+      "price": null,
+      "currency": "USD",
+      "status": "RESEARCH_REQUIRED",
+      "demo": true
+    },
+    {
+      "id": "prod_02244f48-83c7-4eb5-8104-d001fab50dae",
+      "title": "0.5L BPA Free Corded Waterbottle",
+      "description": "A product discovery candidate in our automated storefront experiment. Supplier, delivery and demand checks are pending.",
+      "source_url": "https://thieve.co/products/05l-bpa-free-corded-waterbottle/bJhO7EsMiqITVyeS1W7e",
+      "observed_at": "2026-10-07T00:36:32.698Z",
+      "price": null,
+      "currency": "USD",
+      "status": "RESEARCH_REQUIRED",
+      "demo": true
+    },
+    {
+      "id": "prod_06619928-4ff9-4537-858d-0f6e53d5895b",
+      "title": "10 Min Compress Scuba Kit",
+      "description": "A product discovery candidate in our automated storefront experiment. Supplier, delivery and demand checks are pending.",
+      "source_url": "https://thieve.co/products/10-min-compress-scuba-kit/i8vG2ZIba3tzrkRV1HJz",
+      "observed_at": "2026-10-07T00:36:32.698Z",
+      "price": null,
+      "currency": "USD",
+      "status": "RESEARCH_REQUIRED",
+      "demo": true
+    }
+  ]
+}
