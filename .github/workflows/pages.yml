@@ -30,6 +30,12 @@ jobs:
       - run: node --check site/app.js
       - run: node scripts/validate-stores.cjs
       - run: node --check site/store.js
+      - name: Build safe hosted catalog previews
+        if: github.event_name != 'pull_request'
+        run: node scripts/build-previews.cjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
       - name: Preview artifact
         uses: actions/upload-artifact@v4
         with:
