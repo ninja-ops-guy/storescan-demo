@@ -1,5 +1,6 @@
 {
   "schema_version": 1,
+  "automation_version": 1,
   "mode": "DEMO_ONLY",
   "market": "US",
   "scan_id": "scan_f89ed774-bf8f-49ab-92a3-a451af2025c2",
