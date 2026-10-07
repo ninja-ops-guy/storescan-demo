@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "store": {
+    "slug": "trail-kit",
+    "brand": "Trail Kit Lab",
+    "niche": "Lightweight travel organization",
+    "audience": "Weekend travelers and carry-on packers",
+    "positioning": "Pack simply. Find things quickly.",
+    "color": "#a24f29",
+    "categories": [
+      "travel"
+    ],
+    "currency": "USD",
+    "mode": "DEMO",
+    "domains": [],
+    "return_policy": "Demonstration only. No orders accepted."
+  },
+  "items": [
+    {
+      "id": "prod_88a7c621-f810-4839-873b-5478f8be8c52",
+      "title": "Demo Packing Cubes",
+      "description": "Synthetic workflow demonstration for Trail Kit Lab. Not a real offer.",
+      "category": "travel",
+      "seo_title": "Demo Packing Cubes",
+      "specifications": {
+        "type": "fixture"
+      },
+      "variants": [
+        {
+          "sku": "DEMO-trail-kit",
+          "label": "DEMO-trail-kit",
+          "price_cents": 5000
+        }
+      ],
+      "currency": "USD",
+      "shipping_disclosure": "No orders; delivery figures are fixtures.",
+      "media": [
+        {
+          "url": null,
+          "rights": "GENERATED_PLACEHOLDER",
+          "provenance": "Original demo placeholder"
+        }
+      ],
+      "demo": true,
+      "fixture": true,
+      "commercial_eligibility": "NOT_ACCEPTING_ORDERS",
+      "source_urls": []
+    }
+  ],
+  "release_hash": "83293af469ce397e27301130be93427c218aa266067a0e478600284cc916205a"
+}
