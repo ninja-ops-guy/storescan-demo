@@ -2,6 +2,8 @@ name: Validate and publish demo
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '47 14 * * *'
@@ -18,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: main
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -26,7 +28,15 @@ jobs:
       - run: node scripts/improve.cjs
       - run: node --test test/*.test.cjs
       - run: node --check site/app.js
+      - run: node scripts/validate-stores.cjs
+      - run: node --check site/store.js
+      - name: Preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: storefront-preview
+          path: site
       - name: Record validated quality improvements
+        if: github.event_name != 'pull_request'
         run: |
           if ! git diff --quiet -- site/experience.json; then
             git config user.name 'storescan-quality-bot'
@@ -36,10 +46,13 @@ jobs:
             git push origin HEAD:main
           fi
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request'
         with:
           path: site
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     permissions:
