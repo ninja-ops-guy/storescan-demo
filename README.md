@@ -1,35 +1,50 @@
-# StoreScan Lab — demo storefront
+# StarNet Store Labs
 
-A static, automated research storefront. **No checkout, payments, orders or verified sales claims.**
+One Bootstrap 5.3.8 renderer, multiple configured niche stores, and validated GitHub catalog publishing.
 
-## Automation
+- [StoreScan Desk Lab](https://ninja-ops-guy.github.io/storescan-demo/?store=storescan-lab): home-office organization.
+- [Trail Kit Lab](https://ninja-ops-guy.github.io/storescan-demo/?store=trail-kit): travel organization.
 
-1. StarNet scans Thieve daily at 09:00 America/New_York 
-2. Analyst, risk reviewer and operator run at 09:10 / 09:20 / 09:30.
-3. A fixed-target data publisher syncs eligible discovery candidates to `site/catalog.json` hourly at minute 45. It also catches up after missed runs while StarNet is active.
-4. A commit triggers GitHub Actions validation and Pages deployment. A daily cloud rebuild checks the saved catalog even when the local computer is offline; it cannot run the local crawler.
+**Both stores are demonstrations.** Fixture products, evidence, prices and outcomes are synthetic.
+No checkout, payment collection, customer accounts or order acceptance is implemented here.
 
-The publisher is in the private local StarNet checkout, not this public repository. It exports only public product names, source URLs, source timestamps and an explicit unverified demo status. No supplier credentials, browser profiles, prompts, financial records or keys are exported. Existing GitHub CLI authentication remains local. Unchanged catalogs produce no commit. Stale or failed scans retain the last catalog. Concurrent publisher runs are locked, and successful writes are read back before recording a local receipt. A repository commit and a successful Pages deployment are separate states.
+## Shared application
 
-Current data gates: Kalodata account required; Google Trends series not connected; supplier and shipping verification pending. Illustrations are abstract placeholders, not product photography. No product is cleared for real sale by appearing here. The basic exclusion filter is not legal clearance.
+`site/index.html`, `site/store.js`, `site/store.css` and vendored Bootstrap serve every tenant.
+`site/stores.json` is the store directory. Tenant catalogs live at
+`site/stores/<slug>/catalog.json`; adding a store does not require copying the application.
+Every catalog has a release hash, explicit mode and commercial eligibility separate from deployment.
 
-## Local preview
+Private StarNet configuration contains niches, policies, supplier terms, economics, budgets,
+agent assignments and workflow state. This repository receives only allowlisted public fields.
+No credentials, private supplier terms, customer data, orders or internal profit figures belong here.
 
-Run `python3 -m http.server 8080 --directory site`, then open http://localhost:8080.
-Run `node --test test/*.test.cjs` to validate the catalog.
+## Automated publication
 
-## Rollback / pause
+The StarNet GitHub adapter creates a content-addressed branch and PR, reuses it on retries,
+waits for passing schema/duplicate/link/media/price/hash/build checks, and merges only when the
+configured demo automation policy permits it. It then verifies the served catalog and records a
+private deployment receipt. Conflicts, failed checks and closed unmerged PRs stop automatic progress.
+The Actions `storefront-preview` artifact is a downloadable static preview; hosted PR previews
+are not configured. Failed validation prevents deployment and leaves the previous site intact.
 
-Disable **StoreScan demo catalog publisher** in StarNet ROUTINES to pause updates. Disable the Pages workflow to pause deployments. To roll back, revert the relevant commit on GitHub and pause the publisher until the source issue is resolved.
+The old single-store catalog/quality files remain as compatibility artifacts. New tenants use the
+schema-v2 catalogs and shared renderer. Catalog-quality reports are generated and retained in build
+artifacts; they do not assert conversion improvement or real profitability.
 
-Only `site/` is deployed. The workflow uses the standard GitHub Pages build artifact and deployment actions: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+## Development
 
-## Bounded improvement loop
+```
+python3 -m http.server 8080 --directory site
+node --test test/*.test.cjs
+node scripts/validate-stores.cjs
+node --check site/store.js
+```
 
-On each catalog update and daily scheduled build, `scripts/improve.cjs` evaluates catalog quality,
-produces `site/experience.json`, runs tests and records changes before deployment. It proposes a
-curated view with stale/duplicate/unsafe candidates withheld and unsupported title claims removed.
-The raw catalog remains unchanged. The future frontend can consume the curated view; current
-frontend work is deferred. History is bounded to 30 changes and unchanged evidence produces no
-new quality commit. The backlog distinguishes missing demand evidence from missing real outcomes.
-This is catalog-quality adaptation, not measured conversion optimization or autonomous code rewriting.
+The actual StarNet engine, scheduler and private operations runbook remain in the existing
+`starnet-commerce` project. Disabling its portfolio publisher pauses automatic PR work.
+To roll back, pause the affected store and revert its catalog change through a validated PR.
+
+Bootstrap is vendored with its MIT license. Placeholder graphics are original CSS shapes,
+not supplier photography. Unknown live integrations remain blocked in StarNet rather than
+being silently filled with simulated market data.
