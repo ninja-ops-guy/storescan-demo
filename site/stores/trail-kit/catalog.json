@@ -17,35 +17,36 @@
   },
   "items": [
     {
-      "id": "prod_88a7c621-f810-4839-873b-5478f8be8c52",
-      "title": "Demo Packing Cubes",
-      "description": "Synthetic workflow demonstration for Trail Kit Lab. Not a real offer.",
       "category": "travel",
+      "commercial_eligibility": "NOT_ACCEPTING_ORDERS",
+      "currency": "USD",
+      "demo": true,
+      "description": "Synthetic workflow demonstration for Trail Kit Lab. Not a real offer.",
+      "fixture": true,
+      "id": "prod_88a7c621-f810-4839-873b-5478f8be8c52",
+      "media": [
+        {
+          "provenance": "Original demo placeholder",
+          "rights": "GENERATED_PLACEHOLDER",
+          "url": null
+        }
+      ],
       "seo_title": "Demo Packing Cubes",
+      "shipping_disclosure": "No orders; delivery figures are fixtures.",
+      "source_urls": [],
       "specifications": {
         "type": "fixture"
       },
+      "title": "Demo Packing Cubes",
       "variants": [
         {
-          "sku": "DEMO-trail-kit",
           "label": "DEMO-trail-kit",
-          "price_cents": 5000
+          "price_cents": 5000,
+          "sku": "DEMO-trail-kit"
         }
       ],
-      "currency": "USD",
-      "shipping_disclosure": "No orders; delivery figures are fixtures.",
-      "media": [
-        {
-          "url": null,
-          "rights": "GENERATED_PLACEHOLDER",
-          "provenance": "Original demo placeholder"
-        }
-      ],
-      "demo": true,
-      "fixture": true,
-      "commercial_eligibility": "NOT_ACCEPTING_ORDERS",
-      "source_urls": []
+      "availability": "ARCHIVED_NOT_FOR_SALE"
     }
   ],
-  "release_hash": "83293af469ce397e27301130be93427c218aa266067a0e478600284cc916205a"
+  "release_hash": "8a9a9279dc564f807dcc8bfd70658a955a0ec1ea40771b55225be8a895dadbb2"
 }
